@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    'use strict';
+
+    //case：array基本方法的使用，和java基本类似
+    /*let ary = [1,2,3,4];
+    let newAry = Array.from(ary);
+    console.log(newAry);
+
+    function toArray() {
+        return Array.from(arguments)
+    }
+
+    console.log(toArray(1, 2, 3));
+    */
+
+    //case2:
+    //target:从该位置开始替换数据
+    //start:从该位置开始读取数据
+    //end:从该位置开始结束读取数据，不包括end
+    let ary = [1, 2, 3, 4, 5, 6, 7, 8];
+    console.log(ary.copyWithin(0, 1, 5));
+
+    //case3:
+    //返回找到第一项的索引
+    let index = ary.findIndex(function (item, index, input) {
+        //item 当前值， index 索引， input：原数组
+        return index === 3;
+    });
+    console.log(index);
+    //find 和 findIndex区别就是find返回item value
+
+    //case4:填充，常用于初始化
+    let haha = [1,2,3,4,5]
+    haha.fill(1, 2, 3);
+    console.log(haha);
+
+    //空位不是undefined
+    let arr1 = Array(3);
+    let arr2 = [undefined, undefined, undefined];
+    console.log(arr1);
+    console.log(arr2);
+
+    //a是index
+    for (let a in haha) {
+        console.log(a);
+    }
+    //a是item
+    for (let a of haha) {
+        console.log(a);
+    }
+    haha.forEach(function (item, index) {
+        //都能拿到
+    })
+    for (let[index, item] of haha.entries()) {
+        console.log(index, item);
+    }
+
+
+</script>

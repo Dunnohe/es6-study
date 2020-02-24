@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    'use strict';
+
+    //construct
+    let map1 = new Map([["a", "1"], ["b", "2"], ["c", "3"]]);
+    console.log(map1);
+
+    //method
+    //get
+    console.log(map1.get("a"));
+
+    //set
+    console.log(map1.set("d", "4"));
+
+    //delete, has, clear
+
+    //数组变map
+    let map2 = new Map();
+    let arr = [1, 2, 3];
+    arr.forEach((item, index) => map2.set(index, item));
+    console.log(map2);
+
+    //foreach keys values entries
+</script>

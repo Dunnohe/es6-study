@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    'use strict';
+
+    //set 声明
+    let set1 = new Set([1, 2, 3, 1]);
+    console.log(set1);
+
+    //set变数组
+    console.log([...set1]);
+    console.log(Array.from(set1));
+
+    //add，注意：返回的是this，可以链式写法
+    console.log(set1.add(4).add(5));
+
+    //has, 有没有
+    console.log(set1.has(1));
+
+    //delete, 删除，返回是否删除成功
+    console.log(set1.delete(1));
+    console.log(set1);
+
+    //clear
+    console.log(set1.clear());
+
+    //集合操作
+
+    //并集
+    function union(arr1, arr2) {
+        return [...new Set([...arr1, ...arr2])];
+    }
+
+    //交集
+    function intersection(arr1, arr2) {
+        return new Set([...arr1].filter(function (item) {
+            arr2.has(item)
+        }));
+    }
+
+
+</script>

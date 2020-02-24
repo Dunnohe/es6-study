@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    let obj = {
+        a : 1,
+        b : 2,
+    };
+    let bValue = Object.getOwnPropertyDescriptor(obj, "b");
+    console.log(bValue);
+
+    let _proxy = new Proxy(obj, {
+        get : function (target, key, receiver) {
+            if(key === "b") {
+                return 4;
+            } else {
+                return Reflect.get(target, key, receiver);
+            }
+        }
+    });
+
+    console.log(obj.b);
+    console.log(_proxy.b);
+
+
+</script>

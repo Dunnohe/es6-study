@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    'use strict';
+
+    //对象属性访问
+    let obj = {
+        a : "haha"
+    };
+    console.log(obj);
+    console.log(obj.a);
+    console.log(obj['a']);
+
+    //属性名用变量替换
+    let a = '3';
+    let b = '4';
+    let obj1 = {
+        [a] : "xixi",
+        [a + b] : a + b
+    };
+    console.log(obj1);
+
+    //对象判断
+    console.log(NaN === NaN);
+    console.log(Object.is(NaN, NaN));
+
+    //对象合并，将obj2内容合并到obj1，返回obj1
+    console.log(Object.assign(obj, obj1) === obj);
+    console.log(Object.assign(obj, obj));
+
+    //获取一个对属性的描述
+    let strLength = Object.getOwnPropertyDescriptor("123", "length");
+    console.log(strLength);
+    //https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+    //{value: 3, writable: false, enumerable: false, configurable: false} 字段值，是否可修改，是否可枚举，是否可配置
+    let aProp = Object.getOwnPropertyDescriptor(obj, "a");
+    console.log(aProp);
+
+    //属性遍历
+    for(let x in obj) {
+        console.log(x);
+    }
+    Object.getOwnPropertyNames(obj);
+
+</script>
