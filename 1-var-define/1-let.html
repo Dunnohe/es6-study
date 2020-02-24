@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+</body>
+</html>
+<script type="text/javascript">
+    'use strict';
+
+    //case1: var 只声明未定义
+    console.log(a);//undefined,只声明未定义
+    var a = 1;
+    console.log(a);
+
+    //case2: let 未声明
+    //console.log(b);//未声明
+    let b = 1;
+    console.log(b);
+
+    //case3: 变量类型
+    /*var c = 1;
+    var c = 2;
+
+    console.log(typeof c);*/
+
+    //case4: es6在解释执行下的一些变化
+    //虽然不进行预解释，但是会把声明的变量过滤一遍。
+    let d = 10;
+    if(d) {
+        //console.log(d);//d not defined
+        let d = 11;
+        console.log(d)//里面的d的块级作用域在里面，里面的console.log在找里面的d
+    }
+
+    //case5：绑定var和let的区别，私有作用域
+    let list = document.getElementsByTagName("li");
+    for (let i = 0; i < list.length; i++) {
+        list[i].onclick = function () {
+            console.log(i);//012
+        }
+    }
+    /*for (var i = 0; i < list.length; i++) {
+        list[i].onclick = function () {
+            console.log(i);//222,因为var作用域全局，这个绑定是异步的，输出的时候var已经是2了
+        }
+    }*/
+
+    //case6：私有作用域
+    //{} 是一个私有作用域，也就是块级作用域
+    function f() {
+        console.log("hello");
+    }
+
+    f();
+
+    //case7：自执行函数
+    {
+        console.log("hello");
+    }//自执行函数
+
+    //case8：注意对象和自执行函数定义区别
+    let obj = {}; //对象，和自执行函数就差一个；
+</script>

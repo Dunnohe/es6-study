@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    'use strict';
+
+    //const 定义的是静态值，不能修改值，必须要赋值，也不能被重新声明，类似java的 final static
+
+    //case1：变量不初始化
+    //const g; 会报错，因为没有赋值
+
+    //case2：不能修改变量
+    //const t = 10; t=20; 会报错，因为再次修改了。
+
+    //case3：测试私有作用域
+    const g = 10;
+    {const g = 20;}
+</script>

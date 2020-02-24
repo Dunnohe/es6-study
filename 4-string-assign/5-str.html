@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    'use strict';
+
+    //case1:字符串解构
+    let [x, y, z] = '123';
+    console.log(x, y, z);
+
+    //case2:字符串长度
+    let {length} = '1235';
+    console.log(length);
+
+    //case3:看String对象
+    let {__proto__} = '1234';
+    console.log(__proto__);
+
+    //case4:String方法使用，基本和java类似
+    let str = '123';
+    console.log(str.indexOf("2"));
+
+    //case5:es6下的连接
+    //连接
+    let str1 = "hello world";
+    document.body.innerHTML = '<h1>' + str1 + '</h1>';
+    document.body.innerHTML += `<h1>${str1}</h1>`;
+
+    let r = 3;
+    let d = 4;
+    //运算
+    document.body.innerHTML += `${r} + ${d} = ${r + d}`;
+
+
+
+</script>
