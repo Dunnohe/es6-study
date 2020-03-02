@@ -21,27 +21,28 @@
         return Array.from(arguments)
     }
 
-    console.log(toArray(1, 2, 3));
-    */
+    console.log(toArray(1, 2, 3));*/
+
 
     //case2:
     //target:从该位置开始替换数据
     //start:从该位置开始读取数据
     //end:从该位置开始结束读取数据，不包括end
-    let ary = [1, 2, 3, 4, 5, 6, 7, 8];
-    console.log(ary.copyWithin(0, 1, 5));
+    /*let ary = [1, 2, 3, 4, 5, 6, 7, 8];//[2, 3, 4, 5, 5, 6, 7, 8];
+    console.log(ary.copyWithin(0, 1, 5));*/
 
     //case3:
     //返回找到第一项的索引
-    let index = ary.findIndex(function (item, index, input) {
+    /*let aa = ary.findIndex(function (item) {
         //item 当前值， index 索引， input：原数组
-        return index === 3;
+        return item === 6;
     });
-    console.log(index);
+    ary.findIndex((item, index) => item === 6);
+    console.log(aa);*/
     //find 和 findIndex区别就是find返回item value
 
     //case4:填充，常用于初始化
-    let haha = [1,2,3,4,5]
+    let haha = [1,2,3,4,5];
     haha.fill(1, 2, 3);
     console.log(haha);
 
@@ -62,6 +63,7 @@
     haha.forEach(function (item, index) {
         //都能拿到
     })
+
     for (let[index, item] of haha.entries()) {
         console.log(index, item);
     }

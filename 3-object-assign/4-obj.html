@@ -13,8 +13,8 @@
     'use strict';
 
     //case1：对象解构
-    /*//对象解构
-    let obj = {
+    //对象解构
+    /*let obj = {
         a1:[1, 2, 3],
         a2:"123"
     };
@@ -23,29 +23,30 @@
     //等价于下面这种写法
     let {a1, a2} = obj;//a2=obj.a2, a1=obj.a1
     console.log(a2, a1);
+
     {
-        let {a2, a2:[x, y]} = obj;
+        let {a2, a1:[x, y]} = obj;
         console.log(a2, x, y);
     }*/
 
     //case2：对象默认值
     /*//对象默认值
-    let {x=2, y} = {y:2};
+    let {x=3, y} = {y:2};
     console.log(x, y);//2, 2
 
     let {m=n} = {};
-    console.log(m) //undefined*/
+    console.log(m); //undefined*/
 
     //case3：赋值类型不是对象，会自动转换成对象
-    /*//赋值类型不是对象，会自动转换成对象
-    let{x, y, __proto__} = 1;
+    //赋值类型不是对象，会自动转换成对象
+    //console.log(typeof 1); int  char
+    /*let{x, y, __proto__} = 1;
     console.log(x, y);
-    console.log(Object(1));
     console.log(__proto__);
-    */
+    console.log(Object(1));//int integer*/
 
     //case4：特殊变量
-    let{length} = [1, 2, 3];
-    console.log(length);
+    /*let{length} = [1, 2, 3];//Array length 3
+    console.log(length);*/
 
 </script>

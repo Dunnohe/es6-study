@@ -16,9 +16,9 @@
     let obj = {
         a : "haha"
     };
-    console.log(obj);
-    console.log(obj.a);
-    console.log(obj['a']);
+    //console.log(obj);
+    //console.log(obj.a);
+    //console.log(obj['a']);
 
     //属性名用变量替换
     let a = '3';
@@ -27,15 +27,15 @@
         [a] : "xixi",
         [a + b] : a + b
     };
-    console.log(obj1);
+    //console.log(obj1);
 
     //对象判断
-    console.log(NaN === NaN);
-    console.log(Object.is(NaN, NaN));
+    /*console.log(NaN === NaN);//false
+    console.log(Object.is(NaN, NaN));//true
 
     //对象合并，将obj2内容合并到obj1，返回obj1
-    console.log(Object.assign(obj, obj1) === obj);
-    console.log(Object.assign(obj, obj));
+    console.log(Object.assign(obj, obj1));
+    console.log(Object.assign(obj, obj));*/
 
     //获取一个对属性的描述
     let strLength = Object.getOwnPropertyDescriptor("123", "length");

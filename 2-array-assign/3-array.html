@@ -14,36 +14,36 @@
 
     //case1：数组解构
     /*let [a, b, c] = [1, 2, 3];
+    console.log(a);
     console.log(a, b, c);*/
 
     //case2：解构赋值
-    /*
     let arr = [1, 2];
     //解构赋值
     let [a, b, c] = arr;
-    console.log(a, b, c);//1, 2, undefined*/
+    console.log(a, b, c);//1, 2, undefined
 
     //case3：嵌套赋值：定义变量怎么写，右边怎么写
-    /*
-    let[x, y, [s], [[f]]] = [1, 2, [3], [[4]]];
+    /*let[x, y, [s], [[f]]] = [1, 2, [3], [[4]]];
     console.log(x, y, s, f);*/
 
     //case4：省略赋值：定义变量怎么写，右边怎么写
-    /*//省略赋值：
-    let ary = [1, 2, 3, 4, 5, 6];
+    //省略赋值：
+    /*let ary = [1, 2, 3, 4, 5, 6];
     let a = ary[0];
     let b = ary[ary.length];
-    let [x, , , , y]=ary;//等价于let[x, x1, x2, x3, y]*/
+    let [x, , , , y]=ary;//等价于let[x, x1, x2, x3, y]
+    console.log(x, y);*/
 
     //case5：不定参数赋值：定义变量怎么写，右边怎么写
-    /*//不定参数赋值
+   /* //不定参数赋值
     let ary = [1, 2, 3, 4, 5];
     let [a,...b] = ary;
     console.log(a, b);//b是一个数组【2， 3， 4， 5】*/
 
     //case6：默认值：定义变量怎么写，右边怎么写
-    /*//默认值
-    let [f1, f2=2] = [1]; //f2=2代表f2的默认值，类似java的option.default
+    //默认值
+    /*let [f1, f2=2] = [1]; //f2=2代表f2的默认值，类似java的option.default
     console.log(f1, f2);*/
 
 </script>
